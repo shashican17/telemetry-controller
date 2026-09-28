@@ -13,18 +13,18 @@ A multi-task embedded controller built with FreeRTOS, simulating an industrial s
 └─────────────┘     └───────────────┘     └──────┬───────┘
                                                   │
                                     ┌─────────────▼──────────┐
-                                    │      can_queue          │
-                                    │      (depth: 10)        │
+                                    │      can_queue         │
+                                    │      (depth: 10)       │
                                     └─────────────┬──────────┘
                                                   │
 ┌──────────────┐     ┌───────────────┐     ┌──────▼───────┐
-│ logging_task │◀────│   log_queue   │◀────│   can_task   │
+│ logging_task │◀────│   log_queue   │◀────│   can_task  │
 │  (prio 2)    │     │  (depth: 20)  │     │  (prio 3)    │
 └──────────────┘     └───────────────┘     └──────────────┘
                                                   │
                                          ┌────────▼────────┐
-                                         │   sensor_log.csv │
-                                         │  (csv_logger.c)  │
+                                         │   sensor_log.csv│
+                                         │  (csv_logger.c) │
                                          └─────────────────┘
 
 ┌──────────────┐     ┌─────────────────────────────────────┐
@@ -95,7 +95,7 @@ sudo apt install cmake gcc git
 
 ```bash
 git clone --recurse-submodules https://github.com/shashican17/telemetry-controller.git
-cd industrial-controller
+cd telemetry-controller
 ```
 
 ### Build
