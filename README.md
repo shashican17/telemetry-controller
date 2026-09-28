@@ -8,7 +8,7 @@ A multi-task embedded controller built with FreeRTOS, simulating an industrial s
 
 ```
 ┌─────────────┐     ┌───────────────┐     ┌──────────────┐
-│ sensor_task │────▶│ sensor_queue  │────▶│ control_task │
+│ sensor_task │────▶│ sensor_queue  │────▶│ control_task│
 │  (prio 1)   │     │  (depth: 10)  │     │  (prio 3)    │
 └─────────────┘     └───────────────┘     └──────┬───────┘
                                                   │
